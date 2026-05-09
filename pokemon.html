@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Gen I</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pokemon.css">
+</head>
+<body>
+
+    <nav class="scroll-nav" aria-label="Page navigation">
+        <button class="snav-dot active" data-slide="0" aria-label="Pikachu"></button>
+        <button class="snav-dot"        data-slide="1" aria-label="Charizard"></button>
+    </nav>
+
+    <div class="scroll-container" id="scrollContainer">
+
+
+        <!-- ===================================================
+             SLIDE 1 — PIKACHU
+        ==================================================== -->
+        <div class="slide slide-pikachu" id="slide0">
+            <div class="page">
+
+                <!-- ---- LEFT PANEL ---- -->
+                <section class="left-panel lp-yellow" aria-label="Pikachu information">
+
+                    <div class="pokemon-logo anim-logo">
+                        <img src="assets/pokemonlogo.png" alt="Pokemon" width="200" height="52">
+                    </div>
+
+                    <p  class="gen-label  anim-up" style="--d:.38s">Pokemon Gen I</p>
+                    <h1 class="pokemon-name anim-up" data-text="Pikachu" style="--d:.50s">Pikachu</h1>
+                    <p  class="pokemon-desc anim-up" style="--d:.62s">
+                        Pikachu is an Electric-type Pokémon introduced in Generation I.
+                        Small, chubby, and incredibly cute — almost completely covered
+                        by yellow fur.
+                    </p>
+
+                    <div class="counter anim-up" style="--d:.74s" aria-label="Card 1 of 8">
+                        <div class="counter-line"></div>
+                        <span class="counter-text">01 / 08</span>
+                    </div>
+
+                    <!-- STATS SECTION -->
+                    <div class="stats-section anim-up" style="--d:.86s" aria-label="Pikachu stats">
+
+                        <!-- quick info grid -->
+                        <div class="sq-grid">
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <path d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                    </svg>
+                                    Type
+                                </span>
+                                <div class="sq-types">
+                                    <span class="type-pill pill-electric">⚡ Electric</span>
+                                </div>
+                            </div>
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <rect x="2" y="1" width="5" height="14" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+                                        <line x1="7" y1="4"  x2="10" y2="4"  stroke="currentColor" stroke-width="1.3"/>
+                                        <line x1="7" y1="8"  x2="12" y2="8"  stroke="currentColor" stroke-width="1.3"/>
+                                        <line x1="7" y1="12" x2="10" y2="12" stroke="currentColor" stroke-width="1.3"/>
+                                    </svg>
+                                    Height
+                                </span>
+                                <span class="sq-val">0.4 m</span>
+                            </div>
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <circle cx="8" cy="10" r="5" stroke="currentColor" stroke-width="1.6"/>
+                                        <path d="M5.5 5.5 Q8 2 10.5 5.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                                        <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                    Weight
+                                </span>
+                                <span class="sq-val">6.0 kg</span>
+                            </div>
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <polygon points="8,1 10,6 15,6 11,9.5 12.5,14.5 8,11 3.5,14.5 5,9.5 1,6 6,6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                    Ability
+                                </span>
+                                <span class="sq-val">Static</span>
+                            </div>
+                        </div>
+
+                        <!-- base stat bars -->
+                        <div class="sc-divider"></div>
+
+                        <div class="sb-header">
+                            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <rect x="1" y="10" width="3" height="5" rx="1" fill="currentColor"/>
+                                <rect x="6" y="6"  width="3" height="9" rx="1" fill="currentColor"/>
+                                <rect x="11" y="2" width="3" height="13" rx="1" fill="currentColor"/>
+                            </svg>
+                            Base Stats
+                        </div>
+
+                        <div class="sb-list">
+                            <div class="sb-row">
+                                <span class="sb-lbl">HP</span>
+                                <span class="sb-num">35</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill" style="--pct:14%;--clr:#ff5959;--del:2.85s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">Atk</span>
+                                <span class="sb-num">55</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill" style="--pct:22%;--clr:#f5ac78;--del:3.00s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">Def</span>
+                                <span class="sb-num">40</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill" style="--pct:16%;--clr:#fae078;--del:3.15s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">SpA</span>
+                                <span class="sb-num">50</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill" style="--pct:20%;--clr:#9db7f5;--del:3.30s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">SpD</span>
+                                <span class="sb-num">50</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill" style="--pct:20%;--clr:#a7db8d;--del:3.45s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">Spd</span>
+                                <span class="sb-num">90</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill" style="--pct:35%;--clr:#fa92b2;--del:3.60s"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sb-total">
+                            <span>Total</span>
+                            <strong>320</strong>
+                        </div>
+
+                    </div><!-- /stats-section -->
+
+                    <div class="pokeball-watermark" aria-hidden="true">
+                        <img src="assets/pokeball.png" alt="">
+                    </div>
+
+                    <div class="lightning-container" aria-hidden="true">
+                        <div class="bolt" style="--dur:2.8s;--delay:4s;--tx:-30px;--ty:-60px;--tx2:-55px;--ty2:-105px;top:35%;right:32%;">
+                            <svg width="20" height="34" viewBox="0 0 22 38" fill="none"><polygon points="14,0 4,20 11,20 8,38 20,14 12,14" fill="#fff" opacity="0.9"/></svg>
+                        </div>
+                        <div class="bolt" style="--dur:3.2s;--delay:5s;--tx:38px;--ty:-48px;--tx2:65px;--ty2:-86px;top:42%;right:24%;">
+                            <svg width="14" height="26" viewBox="0 0 16 28" fill="none"><polygon points="10,0 3,14 8,14 6,28 15,10 9,10" fill="#ffe066" opacity="0.85"/></svg>
+                        </div>
+                        <div class="spark" style="--dur:2.1s;--delay:4.2s;--tx:-52px;--ty:-32px;top:38%;right:28%;"></div>
+                        <div class="spark" style="--dur:2.6s;--delay:5.1s;--tx:42px;--ty:-50px;top:44%;right:22%;"></div>
+                        <div class="spark" style="--dur:1.9s;--delay:5.8s;--tx:-38px;--ty:42px;top:50%;right:26%;"></div>
+                    </div>
+
+                </section>
+
+                <!-- ---- RIGHT PANEL ---- -->
+                <section class="right-panel rp-cream" aria-label="Pikachu illustration">
+
+                    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+
+                    <div class="pikachu-wrap">
+                        <div class="electric-ring" aria-hidden="true"></div>
+                        <div class="electric-ring" aria-hidden="true"></div>
+                        <div class="ball-closed" aria-hidden="true"><img src="assets/pokeball.png" alt=""></div>
+                        <div class="ball-open"   aria-hidden="true"><img src="assets/pokeballopen.png" alt=""></div>
+                        <div class="ball-flash"  aria-hidden="true"></div>
+                        <img class="pikachu-img" src="assets/Old_Pikachu.png"
+                             alt="Pikachu — Electric-type Pokémon"
+                             width="560" height="560" loading="eager">
+                    </div>
+
+                    <div class="type-badge anim-fadein" style="--d:2.6s">⚡ Electric</div>
+                    <a class="explore-btn anim-fadein" href="#" style="--d:2.7s" aria-label="Explore Pikachu">Explore</a>
+
+                </section>
+
+            </div>
+        </div><!-- /slide-pikachu -->
+
+
+        <!-- ===================================================
+             SLIDE 2 — CHARIZARD
+        ==================================================== -->
+        <div class="slide slide-charizard" id="slide1">
+            <div class="page">
+
+                <!-- ---- LEFT PANEL ---- -->
+                <section class="left-panel lp-orange" aria-label="Charizard information">
+
+                    <div class="pokemon-logo char-anim char-logo">
+                        <img src="assets/pokemonlogo.png" alt="Pokemon" width="200" height="52">
+                    </div>
+
+                    <p  class="gen-label  char-anim char-t1">Pokemon Gen I</p>
+                    <h1 class="pokemon-name char-anim char-t2" data-text="Charizard">Charizard</h1>
+                    <p  class="pokemon-desc char-anim char-t3">
+                        Charizard is a Fire/Flying-type Pokémon introduced in Generation I.
+                        It flies in search of powerful opponents and breathes fire so intense
+                        it melts anything.
+                    </p>
+
+                    <div class="counter char-anim char-t4" aria-label="Card 2 of 8">
+                        <div class="counter-line"></div>
+                        <span class="counter-text">02 / 08</span>
+                    </div>
+
+                    <!-- STATS SECTION — Charizard -->
+                    <div class="stats-section char-anim char-t5" aria-label="Charizard stats">
+
+                        <div class="sq-grid">
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <path d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                    </svg>
+                                    Type
+                                </span>
+                                <div class="sq-types">
+                                    <span class="type-pill pill-fire">🔥 Fire</span>
+                                    <span class="type-pill pill-flying">Flying</span>
+                                </div>
+                            </div>
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <rect x="2" y="1" width="5" height="14" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+                                        <line x1="7" y1="4"  x2="10" y2="4"  stroke="currentColor" stroke-width="1.3"/>
+                                        <line x1="7" y1="8"  x2="12" y2="8"  stroke="currentColor" stroke-width="1.3"/>
+                                        <line x1="7" y1="12" x2="10" y2="12" stroke="currentColor" stroke-width="1.3"/>
+                                    </svg>
+                                    Height
+                                </span>
+                                <span class="sq-val">1.7 m</span>
+                            </div>
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <circle cx="8" cy="10" r="5" stroke="currentColor" stroke-width="1.6"/>
+                                        <path d="M5.5 5.5 Q8 2 10.5 5.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                                        <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                    Weight
+                                </span>
+                                <span class="sq-val">90.5 kg</span>
+                            </div>
+                            <div class="sq-item">
+                                <span class="sq-label">
+                                    <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                        <polygon points="8,1 10,6 15,6 11,9.5 12.5,14.5 8,11 3.5,14.5 5,9.5 1,6 6,6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" fill="none"/>
+                                    </svg>
+                                    Ability
+                                </span>
+                                <span class="sq-val">Blaze</span>
+                            </div>
+                        </div>
+
+                        <div class="sc-divider"></div>
+
+                        <div class="sb-header">
+                            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <rect x="1" y="10" width="3" height="5" rx="1" fill="currentColor"/>
+                                <rect x="6" y="6"  width="3" height="9" rx="1" fill="currentColor"/>
+                                <rect x="11" y="2" width="3" height="13" rx="1" fill="currentColor"/>
+                            </svg>
+                            Base Stats
+                        </div>
+
+                        <div class="sb-list">
+                            <div class="sb-row">
+                                <span class="sb-lbl">HP</span>
+                                <span class="sb-num">78</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill char-bar" style="--pct:31%;--clr:#ff5959;--del:0.15s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">Atk</span>
+                                <span class="sb-num">84</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill char-bar" style="--pct:33%;--clr:#f5ac78;--del:0.30s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">Def</span>
+                                <span class="sb-num">78</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill char-bar" style="--pct:31%;--clr:#fae078;--del:0.45s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">SpA</span>
+                                <span class="sb-num">109</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill char-bar" style="--pct:43%;--clr:#9db7f5;--del:0.60s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">SpD</span>
+                                <span class="sb-num">85</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill char-bar" style="--pct:33%;--clr:#a7db8d;--del:0.75s"></div>
+                                </div>
+                            </div>
+                            <div class="sb-row">
+                                <span class="sb-lbl">Spd</span>
+                                <span class="sb-num">100</span>
+                                <div class="sb-track">
+                                    <div class="sb-fill char-bar" style="--pct:39%;--clr:#fa92b2;--del:0.90s"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sb-total">
+                            <span>Total</span>
+                            <strong>534</strong>
+                        </div>
+
+                    </div><!-- /stats-section char -->
+
+                    <div class="pokeball-watermark" aria-hidden="true">
+                        <img src="assets/pokeball.png" alt="">
+                    </div>
+
+                    <div class="fire-container" aria-hidden="true">
+                        <div class="ember" style="--x:33%;--dur:2.4s;--delay:0.1s;--size:10px"></div>
+                        <div class="ember" style="--x:40%;--dur:3.1s;--delay:0.5s;--size:7px"></div>
+                        <div class="ember" style="--x:47%;--dur:2.7s;--delay:0.9s;--size:12px"></div>
+                        <div class="ember" style="--x:54%;--dur:2.2s;--delay:0.3s;--size:8px"></div>
+                        <div class="ember" style="--x:61%;--dur:3.0s;--delay:1.2s;--size:6px"></div>
+                        <div class="ember" style="--x:29%;--dur:2.9s;--delay:0.7s;--size:9px"></div>
+                        <div class="ember" style="--x:37%;--dur:2.1s;--delay:1.5s;--size:11px"></div>
+                        <div class="ember" style="--x:52%;--dur:3.3s;--delay:0.4s;--size:7px"></div>
+                    </div>
+
+                </section>
+
+                <!-- ---- RIGHT PANEL ---- -->
+                <section class="right-panel rp-orange" aria-label="Charizard illustration">
+
+                    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+
+                    <div class="charizard-wrap">
+                        <div class="fire-ring" aria-hidden="true"></div>
+                        <div class="fire-ring" aria-hidden="true"></div>
+                        <img class="charizard-img char-anim char-pokemon"
+                             src="assets/charizard.png"
+                             alt="Charizard — Fire and Flying-type Pokémon"
+                             width="560" height="560" loading="lazy">
+                    </div>
+
+                    <div class="type-badge badge-fire char-anim char-badge">🔥 Fire · Flying</div>
+                    <a class="explore-btn explore-dark char-anim char-explore" href="#" aria-label="Explore Charizard">Explore</a>
+
+                </section>
+
+            </div>
+        </div><!-- /slide-charizard -->
+
+    </div><!-- /scroll-container -->
+
+
+    <script>
+        const slides   = document.querySelectorAll('.slide');
+        const snavDots = document.querySelectorAll('.snav-dot');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                const idx = [...slides].indexOf(entry.target);
+                snavDots.forEach((d, i) => d.classList.toggle('active', i === idx));
+
+                if (idx === 1 && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = '1';
+                    entry.target.querySelectorAll('.char-anim').forEach(el => el.classList.add('char-in'));
+
+                    // fire charizard stat bars after card slides in
+                    setTimeout(() => {
+                        entry.target.querySelectorAll('.char-bar').forEach(b => b.classList.add('bar-run'));
+                    }, 750);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        slides.forEach(s => observer.observe(s));
+
+        snavDots.forEach(btn => {
+            btn.addEventListener('click', () => {
+                slides[parseInt(btn.dataset.slide)].scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.querySelectorAll('.hamburger').forEach(hamburger => {
+            let open = false;
+            hamburger.addEventListener('click', () => {
+                open = !open;
+                const [s1, s2, s3] = hamburger.querySelectorAll('span');
+                s1.style.transform = open ? 'translateY(8px) rotate(45deg)'   : '';
+                s2.style.opacity   = open ? '0'                                : '';
+                s3.style.transform = open ? 'translateY(-8px) rotate(-45deg)' : '';
+                hamburger.setAttribute('aria-expanded', open);
+            });
+        });
+    </script>
+
+</body>
+</html>
