@@ -339,32 +339,57 @@ html, body {
 
 .auto-scroll-hint {
     position: absolute;
-    bottom: 44px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+    opacity: 0;
+    animation: fadeHintIn 0.5s ease 4.6s forwards;
     cursor: pointer;
     transition: opacity 0.4s ease;
 }
 
-.auto-scroll-hint span {
+.scroll-arrow-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auto-scroll-ring {
+    position: absolute;
+    inset: 0;
+}
+
+.scroll-arrow-icon {
+    color: rgba(0,0,0,0.55);
+    animation: hintBounce 1.4s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-arrow-label {
     font-size: 9px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(0,0,0,0.45);
+    color: rgba(0,0,0,0.4);
 }
 
-.auto-scroll-hint svg {
-    animation: hintBounce 1.4s ease-in-out infinite;
+@keyframes fadeHintIn {
+    to { opacity: 1; }
 }
 
 @keyframes hintBounce {
     0%,100% { transform: translateY(0); }
-    50%      { transform: translateY(4px); }
+    50%      { transform: translateY(5px); }
 }
 
 
