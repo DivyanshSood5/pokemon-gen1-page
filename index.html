@@ -199,6 +199,20 @@
                     <div class="type-badge anim-fadein" style="--d:2.6s">⚡ Electric</div>
                     <a class="explore-btn anim-fadein" href="#" style="--d:2.7s" aria-label="Explore Pikachu">Explore</a>
 
+                    <!-- auto-scroll countdown hint -->
+                    <div class="auto-scroll-hint anim-fadein" style="--d:4.6s" aria-hidden="true">
+                        <svg class="auto-scroll-ring" width="36" height="36" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="2.5"/>
+                            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(0,0,0,0.55)" stroke-width="2.5"
+                                    stroke-dasharray="28" stroke-dashoffset="28"
+                                    stroke-linecap="round"
+                                    transform="rotate(-90 18 18)"/>
+                            <!-- down chevron -->
+                            <polyline points="12,15 18,22 24,15" fill="none" stroke="rgba(0,0,0,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Next</span>
+                    </div>
+
                 </section>
 
             </div>
@@ -412,6 +426,47 @@
         }, { threshold: 0.5 });
 
         slides.forEach(s => observer.observe(s));
+
+        // ---- auto-scroll to Charizard after all slide-1 animations finish ----
+        // last animation completes at ~4.5s (stat bars), so scroll at 5.5s
+        // cancel immediately if user scrolls manually first
+        const container = document.getElementById('scrollContainer');
+        let userScrolled = false;
+
+        const cancelAutoScroll = () => { userScrolled = true; };
+        container.addEventListener('wheel',      cancelAutoScroll, { once: true });
+        container.addEventListener('touchstart', cancelAutoScroll, { once: true });
+        container.addEventListener('keydown',    cancelAutoScroll, { once: true });
+
+        // countdown ring progress
+        const ring = document.querySelector('.auto-scroll-ring circle');
+        const TOTAL = 5500; // ms to wait
+        let start = null;
+
+        function animateRing(ts) {
+            if (userScrolled) { hideHint(); return; }
+            if (!start) start = ts;
+            const pct = Math.min((ts - start) / TOTAL, 1);
+            if (ring) ring.style.strokeDashoffset = 28 * (1 - pct);
+            if (pct < 1) requestAnimationFrame(animateRing);
+        }
+
+        function hideHint() {
+            const hint = document.querySelector('.auto-scroll-hint');
+            if (hint) { hint.style.opacity = '0'; setTimeout(() => hint.remove(), 400); }
+        }
+
+        // start ring animation after page loads
+        setTimeout(() => {
+            if (!userScrolled) requestAnimationFrame(animateRing);
+        }, 100);
+
+        setTimeout(() => {
+            if (!userScrolled) {
+                hideHint();
+                slides[1].scrollIntoView({ behavior: 'smooth' });
+            }
+        }, TOTAL);
 
         snavDots.forEach(btn => {
             btn.addEventListener('click', () => {
